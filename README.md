@@ -26,6 +26,13 @@ Firefighters  all  over  the  world,  put  the  safety  of others  before  their
 * Move_base 
 * Gazebo 
 * GTest
+* TurtleBot3
+
+## Tools and Technology
+* Ubuntu 20.04 (LTS)
+* CMake
+* OpenCV
+* YoloV4-tiny
 
 ## Development Process
 Following the Agile Iterative Process for Development, we switch roles of driver and navigator. Product backlog, iteration backlog and worklog can be found [here](https://docs.google.com/spreadsheets/d/1rBFfK4g2CC1IsPqGAZWokGkGCv19n7TvAoxRm0TySUQ/edit?usp=sharing) and Sprint planning with review notes can be found [here](https://docs.google.com/document/d/1XgyItVMLgMgZYTeKPQwQybjKTmsq5tjbA4Ds0ETw-6w/edit?usp=sharing)
@@ -36,6 +43,27 @@ Following the Agile Iterative Process for Development, we switch roles of driver
 * For the custom world, we also generated a binary occupancy grid, loaded in rviz
 ![image](https://github.com/mjoshi07/project_finder/blob/dev_phase2/data/rviz_map.png)
 * Generated map can be found [here](https://github.com/mjoshi07/project_finder/blob/dev_phase2/maps/)
+
+## Build Instructions
+* Install Dependencies
+* Download yolov4-tiny weights file from [here](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjOnOr4gtD0AhUcpXIEHXXeBJIQFnoECAIQAQ&url=https%3A%2F%2Fgithub.com%2FAlexeyAB%2Fdarknet%2Freleases%2Fdownload%2Fdarknet_yolo_v4_pre%2Fyolov4-tiny.weights&usg=AOvVaw0mQ6LZDwchkF37sFuwpNSi) and move it inside [data](https://github.com/mjoshi07/project_finder/tree/dev_phase2/data)
+* Assuming a ros catkin workspace is already present, clone the repo inside the src folder of your workspace
+```
+git clone https://github.com/naitri/project_finder
+```
+* Build the workspace
+```
+cd ~/your_workspace_dir/
+catkin_make clean
+catkin_make
+source devel/setup.bash
+```
+* Build the tests
+```
+catkin_make run_tests
+```
+
+
 
 ## Static Code analysis
 * Cppcheck results can be found [here](https://github.com/mjoshi07/project_finder/blob/dev_phase2/results/cppcheck.txt)
