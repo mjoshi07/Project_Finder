@@ -2,8 +2,6 @@
 A ROS C++ pacakge for Swarm of 20 robots(TurtleBot3) to perform a search and rescue  operation. Each robot navigates autonomously to designated waypoint, searches for human, if a human is detected, plans a path to nearest fire exit and then returns back to its home location.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://app.travis-ci.com/naitri/Project_Finder.svg?branch=main)]( https://app.travis-ci.com/github/naitri/Project_Finder)
-[![Coverage Status](https://coveralls.io/repos/github/naitri/Project_Finder/badge.svg?branch=main)](https://coveralls.io/github/naitri/Project_Finder?branch=main)
 
 ## Project contibutors
 
